@@ -3,78 +3,351 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASCO – Niskogradnja i Asfaltiranje</title>
-  <meta name="description" content="ASCO d.o.o. – stručnjaci za niskogradnju i asfaltiranje. Izgradnja puteva, parkinga i infrastrukture širom Srbije." />
-  <meta name="keywords" content="asfaltiranje, niskogradnja, izgradnja puteva, Srbija" />
+  <title>ASCO – Asphalt Construction | Niskogradnja i Asfaltiranje Niš</title>
+  <meta name="description" content="ASCO Asphalt Construction – profesionalno asfaltiranje i niskogradnja u Nišu i celoj Srbiji. Iskopi, zemljani radovi, vodovod, putevi. Pozovite: +381 695 550 410" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="theme-color" content="#0F172A" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <div class="logo">ASCO</div>
-    <nav>
-      <a href="#usluge">Usluge</a>
-      <a href="#o-nama">O nama</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <span class="preloader-mark"><img src="slike/ASCO-Logo.png" alt="ASCO – Asphalt Construction" class="logo-img" /></span>
+      <span class="preloader-bar"><span></span></span>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <img src="slike/ASCO-Logo.png" alt="ASCO – Asphalt Construction" class="logo-img" width="326" height="94" />
+      </a>
+      <nav id="nav">
+        <a href="#usluge" class="nav-link">Usluge</a>
+        <a href="#projekti" class="nav-link">Projekti</a>
+        <a href="#o-nama" class="nav-link">O nama</a>
+        <a href="#kontakt" class="nav-link">Kontakt</a>
+      </nav>
+      <a href="tel:+381695550410" class="btn btn-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.18 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.91 6.91l.38-.38a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Pozovite nas
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Otvori meni">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
-  <section class="hero">
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <video class="hero-video" id="hero-video" autoplay muted loop playsinline>
+      <source src="video/IMG_3134.mov" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="hero-particles"></div>
     <div class="hero-content">
-      <h1>Gradimo puteve,<br>stvaramo veze.</h1>
-      <p>Specijalizovani za niskogradnju i asfaltiranje već više od 20 godina.</p>
-      <a href="#kontakt" class="btn">Zatražite ponudu</a>
+      <span class="hero-label">Niš &amp; cela Srbija</span>
+      <h1 id="hero-title">Gradimo puteve, <em>stvaramo veze.</em></h1>
+      <p class="hero-p">Profesionalno asfaltiranje i niskogradnja. Od malih dvorišta do velikih infrastrukturnih projekata — kvalitet koji traje, rokovi koji se poštuju.</p>
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn btn-primary glow-btn">Zatražite ponudu</a>
+        <a href="#projekti" class="btn btn-ghost">Pogledajte radove</a>
+      </div>
+    </div>
+    <div class="hero-stats" id="hero-stats">
+      <div class="stat">
+        <div class="stat-top"><span class="stat-broj" data-target="200">0</span><span class="stat-plus">+</span></div>
+        <span class="stat-opis">Završenih projekata</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-top"><span class="stat-broj" data-target="20">0</span><span class="stat-plus">+</span></div>
+        <span class="stat-opis">Godina iskustva</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-top"><span class="stat-broj" data-target="100">0</span><span class="stat-plus">%</span></div>
+        <span class="stat-opis">Zadovoljnih klijenata</span>
+      </div>
+    </div>
+    <a href="#usluge" class="scroll-down" aria-label="Skroluj dole">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
+    <div class="wave-bottom">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F8FAFC"/></svg>
     </div>
   </section>
 
+  <!-- USLUGE -->
   <section id="usluge" class="usluge">
-    <h2>Naše usluge</h2>
-    <div class="kartice">
-      <div class="kartica">
-        <div class="ikona">🛣️</div>
-        <h3>Asfaltiranje</h3>
-        <p>Izgradnja i rekonstrukcija asfaltnih površina – putevi, parkinga i dvorišta.</p>
+    <div class="container">
+      <div class="sekcija-header reveal">
+        <span class="etiketa">Šta radimo</span>
+        <h2>Naše usluge</h2>
+        <p>Kompletan spektar radova u oblasti asfaltiranja, niskogradnje i uređenja terena.</p>
       </div>
-      <div class="kartica">
-        <div class="ikona">🏗️</div>
-        <h3>Niskogradnja</h3>
-        <p>Izgradnja infrastrukture: kanalizacija, vodovodne mreže, temeljni radovi.</p>
+      <div class="usluge-grid">
+        <div class="usluga-kartica stagger-item"><div class="uk-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18M3 12h18M3 7h18"/></svg></div><h3>Asfaltiranje</h3><p>Polaganje asfalta na putevima, parkinzima i dvorištima modernom mehanizacijom.</p></div>
+        <div class="usluga-kartica stagger-item"><div class="uk-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V10l8-6 8 6v10"/></svg></div><h3>Niskogradnja</h3><p>Izgradnja infrastrukturnih objekata, potpornih zidova i temelja.</p></div>
+        <div class="usluga-kartica stagger-item"><div class="uk-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><h3>Izgradnja puteva</h3><p>Projektovanje i izgradnja lokalnih puteva i saobraćajnica.</p></div>
+        <div class="usluga-kartica stagger-item"><div class="uk-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Uređenje dvorišta</h3><p>Kompletno uređenje stambenih i poslovnih dvorišnih površina.</p></div>
+        <div class="usluga-kartica stagger-item"><div class="uk-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg></div><h3>Iskopi</h3><p>Mašinski iskopi terena za sve vrste građevinskih radova.</p></div>
+        <div class="usluga-kartica stagger-item"><div class="uk-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Zemljani radovi</h3><p>Nasipanje, planiranje i kompaktiranje terena za izgradnju.</p></div>
+        <div class="usluga-kartica stagger-item"><div class="uk-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Zimska služba</h3><p>Čišćenje snega i posipanje soli na putevima i parkinzima.</p></div>
+        <div class="usluga-kartica stagger-item"><div class="uk-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3>Transport</h3><p>Prevoz materijala i opreme za potrebe gradilišta.</p></div>
+        <div class="usluga-kartica stagger-item"><div class="uk-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><h3>Parterno uređenje</h3><p>Uređenje parkovskih i zelenih površina oko objekata.</p></div>
+        <div class="usluga-kartica stagger-item"><div class="uk-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div><h3>Behaton i ivičnjaci</h3><p>Postavljanje betonske galanterije, behatona i ivičnih kamenica.</p></div>
+        <div class="usluga-kartica stagger-item"><div class="uk-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6m0 4v10M5 5l4 4m6-4-4 4"/></svg></div><h3>Vodovod i kanalizacija</h3><p>Izgradnja i rekonstrukcija vodovodnih i kanalizacionih mreža.</p></div>
+        <div class="usluga-kartica stagger-item"><div class="uk-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><h3>Popločavanje</h3><p>Popločavanje dvorišta, terasa i javnih površina različitim materijalima.</p></div>
       </div>
-      <div class="kartica">
-        <div class="ikona">🚧</div>
-        <h3>Saobraćajnice</h3>
-        <p>Projektovanje i izgradnja lokalnih puteva i saobraćajnih površina.</p>
-      </div>
+    </div>
+    <div class="wave-bottom">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,20 C480,80 960,0 1440,50 L1440,80 L0,80 Z" fill="#FFFFFF"/></svg>
     </div>
   </section>
 
+  <!-- PROCES -->
+  <section id="proces" class="proces">
+    <div class="container">
+      <div class="sekcija-header reveal">
+        <span class="etiketa">Kako radimo</span>
+        <h2>Od poziva do gotovog projekta</h2>
+        <p>Jednostavan proces u četiri koraka — bez komplikacija i skrivenih troškova.</p>
+      </div>
+      <div class="proces-grid">
+        <div class="proces-korak stagger-item"><span class="pk-broj">01</span><div class="pk-linija"></div><h3>Poziv i procena</h3><p>Pozovite nas ili pošaljite upit. Izlazimo na teren i besplatno procenjujemo obim radova.</p></div>
+        <div class="proces-korak stagger-item"><span class="pk-broj">02</span><div class="pk-linija"></div><h3>Ponuda</h3><p>Dostavljamo detaljnu i transparentnu ponudu — bez skrivenih troškova i naknadnih iznenađenja.</p></div>
+        <div class="proces-korak stagger-item"><span class="pk-broj">03</span><div class="pk-linija"></div><h3>Izvođenje radova</h3><p>Naš tim sa modernom mehanizacijom realizuje projekat kvalitetno i u dogovorenom roku.</p></div>
+        <div class="proces-korak stagger-item"><span class="pk-broj">04</span><div class="pk-linija"></div><h3>Primopredaja</h3><p>Predajemo gotov projekat uz garanciju kvaliteta i podršku nakon završetka radova.</p></div>
+      </div>
+    </div>
+    <div class="wave-bottom">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#0F172A"/></svg>
+    </div>
+  </section>
+
+  <!-- ZASTO MI — VIDEO BG -->
+  <section class="zasto grain" id="zasto">
+    <video class="zasto-video" autoplay muted loop playsinline>
+      <source src="video/IMG_5274.mov" type="video/mp4" />
+    </video>
+    <div class="zasto-overlay"></div>
+    <div class="container zasto-content">
+      <div class="zasto-grid">
+        <div class="zasto-levo reveal">
+          <span class="etiketa etiketa-svetla">Zašto izabrati nas</span>
+          <h2>Kvalitet koji se vidi,<br>rokovi koji se poštuju.</h2>
+          <p>Više od dve decenije gradimo poverenje kroz profesionalan rad, modernu opremu i transparentnu komunikaciju sa klijentima.</p>
+          <a href="#kontakt" class="btn btn-primary glow-btn">Zatražite besplatnu ponudu</a>
+        </div>
+        <div class="zasto-desno">
+          <div class="zasto-kartica stagger-item"><div class="zk-broj">01</div><div><h4>Moderna mehanizacija</h4><p>Raspolažemo savremenom opremom vodećih svetskih brendova — Dynapac, Vogele i drugi.</p></div></div>
+          <div class="zasto-kartica stagger-item"><div class="zk-broj">02</div><div><h4>Iskusan tim</h4><p>Naši stručnjaci imaju višedecenijsko iskustvo na svim vrstama projekata.</p></div></div>
+          <div class="zasto-kartica stagger-item"><div class="zk-broj">03</div><div><h4>Transparentne cene</h4><p>Detaljna ponuda bez skrivenih troškova. Znate tačno šta plaćate pre početka radova.</p></div></div>
+          <div class="zasto-kartica stagger-item"><div class="zk-broj">04</div><div><h4>Pokrivamo celu Srbiju</h4><p>Iz Niša do svakog ugla Srbije — realizujemo projekte širom zemlje.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="wave-bottom">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,50 C360,0 1080,80 1440,30 L1440,80 L0,80 Z" fill="#ffffff"/></svg>
+    </div>
+  </section>
+
+  <!-- GALERIJA -->
+  <section id="projekti" class="projekti">
+    <div class="container">
+      <div class="sekcija-header reveal">
+        <span class="etiketa">Naš rad</span>
+        <h2>Završeni projekti</h2>
+        <p>Kliknite na sliku za detaljan prikaz.</p>
+      </div>
+    </div>
+    <div class="galerija">
+      <div class="g-item g-veliko stagger-item" data-lightbox="slike/IMG_3095.jpeg" data-caption="Asfaltiranje — industrijski objekat"><img src="slike/IMG_3095.jpeg" alt="Polaganje asfalta mašinom Dynapac" loading="lazy" /><div class="g-overlay"><span>Asfaltiranje — industrijski objekat</span><div class="g-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div></div>
+      <div class="g-item stagger-item" data-lightbox="slike/IMG_3146.jpeg" data-caption="Trafostanica — Srbija"><img src="slike/IMG_3146.jpeg" alt="Završen asfaltni put na trafostanici" loading="lazy" /><div class="g-overlay"><span>Trafostanica — Srbija</span><div class="g-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div></div>
+      <div class="g-item stagger-item" data-lightbox="slike/IMG_3147.jpeg" data-caption="Interna saobraćajnica"><img src="slike/IMG_3147.jpeg" alt="Asfaltni put kroz trafostanicu" loading="lazy" /><div class="g-overlay"><span>Interna saobraćajnica</span><div class="g-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div></div>
+      <div class="g-item stagger-item" data-lightbox="slike/IMG_5219.jpeg" data-caption="Stambeni kompleks"><img src="slike/IMG_5219.jpeg" alt="Asfaltiranje uz stambeni objekat" loading="lazy" /><div class="g-overlay"><span>Stambeni kompleks</span><div class="g-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div></div>
+      <div class="g-item g-veliko stagger-item" data-lightbox="slike/IMG_5220.jpeg" data-caption="Polaganje asfalta — Vogele finišer"><img src="slike/IMG_5220.jpeg" alt="Polaganje asfalta mašinom Vogele" loading="lazy" /><div class="g-overlay"><span>Polaganje asfalta — Vogele finišer</span><div class="g-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div></div>
+      <div class="g-item stagger-item" data-lightbox="slike/IMG_5276.jpeg" data-caption="Završeni radovi"><img src="slike/IMG_5276.jpeg" alt="Završeni asfaltni radovi" loading="lazy" /><div class="g-overlay"><span>Završeni radovi</span><div class="g-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div></div>
+      <div class="g-item stagger-item" data-lightbox="slike/IMG_5280.jpeg" data-caption="Parkiralište"><img src="slike/IMG_5280.jpeg" alt="Asfaltiranje parkiralista" loading="lazy" /><div class="g-overlay"><span>Parkiralište</span><div class="g-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div></div>
+      <div class="g-item stagger-item" data-lightbox="slike/IMG_5316.jpeg" data-caption="Tim na terenu"><img src="slike/IMG_5316.jpeg" alt="Tim na gradilištu" loading="lazy" /><div class="g-overlay"><span>Tim na terenu</span><div class="g-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div></div>
+      <div class="g-item stagger-item" data-lightbox="slike/IMG_5341.jpeg" data-caption="Radovi na terenu"><img src="slike/IMG_5341.jpeg" alt="Gradiliste radovi" loading="lazy" /><div class="g-overlay"><span>Radovi na terenu</span><div class="g-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div></div>
+      <div class="g-item stagger-item" data-lightbox="slike/IMG_6427.jpeg" data-caption="Asfaltni radovi"><img src="slike/IMG_6427.jpeg" alt="Asfaltiranje" loading="lazy" /><div class="g-overlay"><span>Asfaltni radovi</span><div class="g-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div></div>
+      <div class="g-item stagger-item" data-lightbox="slike/IMG_6442.jpeg" data-caption="Niskogradnja"><img src="slike/IMG_6442.jpeg" alt="Gradiliste" loading="lazy" /><div class="g-overlay"><span>Niskogradnja</span><div class="g-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div></div>
+      <div class="g-item stagger-item" data-lightbox="slike/IMG_6544.jpeg" data-caption="Završen projekat"><img src="slike/IMG_6544.jpeg" alt="Završen projekat" loading="lazy" /><div class="g-overlay"><span>Završen projekat</span><div class="g-zoom"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div></div>
+    </div>
+    <div class="wave-bottom" style="background:white;">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,30 C720,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F8FAFC"/></svg>
+    </div>
+  </section>
+
+  <!-- O NAMA -->
   <section id="o-nama" class="o-nama">
-    <div class="o-nama-sadrzaj">
-      <h2>O nama</h2>
-      <p>ASCO je firma sa dugogodišnjim iskustvom u oblasti niskogradnje i asfaltiranja. Naš tim stručnjaka garantuje kvalitetnu izvedbu u roku i u okviru budžeta.</p>
-      <ul>
-        <li>✅ Više od 200 završenih projekata</li>
-        <li>✅ Moderna mehanizacija</li>
-        <li>✅ Licencirani izvođač radova</li>
-        <li>✅ Pokrivamo celu Srbiju</li>
-      </ul>
+    <div class="container">
+      <div class="o-nama-grid">
+        <div class="o-nama-slika reveal">
+          <img src="slike/IMG_5273.jpeg" alt="ASCO tim na terenu" loading="lazy" />
+          <div class="o-nama-badge reveal">
+            <span class="badge-broj">20+</span>
+            <span class="badge-tekst">godina iskustva</span>
+          </div>
+        </div>
+        <div class="o-nama-tekst reveal">
+          <span class="etiketa">Ko smo mi</span>
+          <h2>Iskustvo koje<br>gradi poverenje.</h2>
+          <p>ASCO – Asphalt Construction je firma sa sedištem u Nišu, specijalizovana za asfaltiranje i niskogradnju. Više od dve decenije realizujemo projekte za privatne i javne klijente, od malih stambenih dvorišta do velikih infrastrukturnih radova.</p>
+          <p>Naš tim stručnjaka i moderna mehanizacija garantuju vrhunski kvalitet u svakom projektu.</p>
+          <ul class="lista">
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Više od 200 uspešno završenih projekata</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Moderna mehanizacija — Dynapac, Vogele</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Licencirani izvođač radova</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Pokrivamo celu Srbiju</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Besplatna procena i detaljna ponuda</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="kontakt" class="kontakt">
-    <h2>Kontaktirajte nas</h2>
-    <p>Pošaljite nam upit i odgovorićemo u najkraćem roku.</p>
-    <form>
-      <input type="text" placeholder="Vaše ime" required />
-      <input type="email" placeholder="Email adresa" required />
-      <textarea placeholder="Opišite vaš projekat..." rows="5" required></textarea>
-      <button type="submit" class="btn">Pošaljite upit</button>
-    </form>
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="sekcija-header reveal">
+        <span class="etiketa">Česta pitanja</span>
+        <h2>Pitanja i odgovori</h2>
+        <p>Najčešća pitanja klijenata. Ako ne nađete odgovor, pozovite nas — rado pomažemo.</p>
+      </div>
+      <div class="faq-lista">
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false"><span>Koliko košta asfaltiranje?</span><svg class="faq-ikona" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a"><p>Cena zavisi od površine, debljine asfaltnog sloja i pripreme terena. Pošaljite nam upit ili nas pozovite — izlazimo na teren i dajemo besplatnu, tačnu procenu bez obaveze.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false"><span>Koju teritoriju pokrivate?</span><svg class="faq-ikona" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a"><p>Sedište nam je u Nišu, ali radimo na celoj teritoriji Srbije — od malih privatnih projekata do velikih infrastrukturnih radova.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false"><span>Da li dajete garanciju na radove?</span><svg class="faq-ikona" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a"><p>Da, na sve izvedene radove dajemo garanciju kvaliteta. Koristimo proverene materijale i modernu mehanizaciju kako bismo osigurali dugotrajnost.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false"><span>Koliko brzo možete da izađete na teren?</span><svg class="faq-ikona" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a"><p>Najčešće u roku od 24–48 sati za procenu, u zavisnosti od lokacije i sezone. Za hitne slučajeve, pozovite nas direktno.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false"><span>Da li radite i manje, privatne projekte?</span><svg class="faq-ikona" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a"><p>Naravno. Radimo sve — od dvorišta, prilaza i parkinga kod kuće, do velikih puteva i industrijskih površina.</p></div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2026 ASCO d.o.o. – Sva prava zadržana.</p>
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner-sadrzaj reveal">
+        <h2>Imate projekat na umu?</h2>
+        <p>Kontaktirajte nas danas i dobijte besplatnu procenu u roku od 24 sata.</p>
+        <div class="cta-banner-akcije">
+          <a href="tel:+381695550410" class="btn btn-primary glow-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.18 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.91 6.91l.38-.38a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+381 695 550 410</a>
+          <a href="#kontakt" class="btn btn-outline-white">Pošaljite upit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="kontakt">
+    <div class="container">
+      <div class="kontakt-grid">
+        <div class="kontakt-info reveal">
+          <span class="etiketa">Stupite u kontakt</span>
+          <h2>Zatražite besplatnu ponudu</h2>
+          <p>Opišite vaš projekat i odgovorićemo u roku od 24 sata sa detaljnom ponudom.</p>
+          <div class="kontakt-stavke">
+            <a href="tel:+381695550410" class="kontakt-stavka"><div class="ks-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.18 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.91 6.91l.38-.38a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><span class="ks-label">Telefon</span><span class="ks-vrednost">+381 695 550 410</span></div></a>
+            <a href="mailto:office@asco.rs" class="kontakt-stavka"><div class="ks-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><span class="ks-label">Email</span><span class="ks-vrednost">office@asco.rs</span></div></a>
+            <div class="kontakt-stavka"><div class="ks-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><span class="ks-label">Adresa</span><span class="ks-vrednost">Svrljski Partizanski Odred 43, Niš</span></div></div>
+            <div class="kontakt-stavka"><div class="ks-ikona"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><span class="ks-label">Radno vreme</span><span class="ks-vrednost">Pon–Pet: 07:00–17:00</span></div></div>
+          </div>
+        </div>
+        <form class="kontakt-forma reveal" id="kontakt-forma" novalidate>
+          <div class="forma-red">
+            <div class="forma-polje"><label for="ime">Ime i prezime <span>*</span></label><input type="text" id="ime" name="ime" placeholder="Marko Marković" required autocomplete="name" /></div>
+            <div class="forma-polje"><label for="telefon">Telefon <span>*</span></label><input type="tel" id="telefon" name="telefon" placeholder="+381 60 000 0000" required autocomplete="tel" /></div>
+          </div>
+          <div class="forma-polje"><label for="email">Email adresa</label><input type="email" id="email" name="email" placeholder="marko@email.com" autocomplete="email" /></div>
+          <div class="forma-polje">
+            <label for="usluga">Vrsta usluge</label>
+            <select id="usluga" name="usluga"><option value="">Izaberite uslugu...</option><option>Asfaltiranje</option><option>Niskogradnja</option><option>Izgradnja puteva</option><option>Iskopi</option><option>Zemljani radovi</option><option>Uređenje dvorišta</option><option>Zimska služba</option><option>Vodovod i kanalizacija</option><option>Behaton i ivičnjaci</option><option>Popločavanje</option><option>Transport</option><option>Ostalo</option></select>
+          </div>
+          <div class="forma-polje"><label for="poruka">Opis projekta <span>*</span></label><textarea id="poruka" name="poruka" rows="5" placeholder="Opišite lokaciju, površinu i vrstu radova..." required></textarea></div>
+          <button type="submit" class="btn btn-primary btn-full glow-btn" id="submit-btn">Pošaljite upit</button>
+          <div class="forma-napomena"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Vaši podaci su zaštićeni. Odgovaramo u roku od 24 sata.</div>
+        </form>
+      </div>
+      <div class="kontakt-mapa reveal">
+        <iframe src="https://maps.google.com/maps?q=Svrljski%20partizanski%20odred%2043%2C%20Ni%C5%A1&z=15&output=embed" width="100%" height="340" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="ASCO lokacija — Niš"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="grain">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="slike/ASCO-Logo.png" alt="ASCO – Asphalt Construction" class="logo-img" width="326" height="94" />
+          </div>
+          <p>Profesionalno asfaltiranje i niskogradnja u Nišu i celoj Srbiji od 2004. godine.</p>
+        </div>
+        <div class="footer-linkovi"><h4>Usluge</h4><ul><li><a href="#usluge">Asfaltiranje</a></li><li><a href="#usluge">Niskogradnja</a></li><li><a href="#usluge">Iskopi</a></li><li><a href="#usluge">Zimska služba</a></li><li><a href="#usluge">Transport</a></li></ul></div>
+        <div class="footer-linkovi"><h4>Kompanija</h4><ul><li><a href="#o-nama">O nama</a></li><li><a href="#projekti">Projekti</a></li><li><a href="#kontakt">Kontakt</a></li></ul></div>
+        <div class="footer-kontakt"><h4>Kontakt</h4><p><a href="tel:+381695550410">+381 695 550 410</a></p><p><a href="mailto:office@asco.rs">office@asco.rs</a></p><p>Svrljski Partizanski Odred 43<br>18000 Niš, Srbija</p></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 ASCO d.o.o. – Sva prava zadržana.</p><p>Niš, Srbija</p></div>
+    </div>
   </footer>
 
+  <!-- FLOATING CALL -->
+  <a href="tel:+381695550410" class="floating-call" aria-label="Pozovite nas">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.18 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.91 6.91l.38-.38a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  </a>
+
+  <!-- BACK TO TOP -->
+  <button class="back-top" id="back-top" aria-label="Nazad na vrh">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pregled slike">
+    <button class="lb-close" id="lb-close" aria-label="Zatvori">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lb-prev" id="lb-prev" aria-label="Prethodna slika">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="lb-content">
+      <img id="lb-img" src="" alt="" />
+      <p class="lb-caption" id="lb-caption"></p>
+    </div>
+    <button class="lb-next" id="lb-next" aria-label="Sledeća slika">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="lb-counter" id="lb-counter"></div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
