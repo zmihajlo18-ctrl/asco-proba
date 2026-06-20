@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #1a1a1a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #f5a623;
+  letter-spacing: 3px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #f5a623;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.btn {
+  background: #f5a623;
+  color: #1a1a1a;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #e0951a;
+}
+
+/* USLUGE */
+.usluge {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.usluge h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #1a1a1a;
+}
+
+.kartice {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.kartica {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  width: 280px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.kartica:hover {
+  transform: translateY(-6px);
+}
+
+.ikona {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.kartica h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #1a1a1a;
+}
+
+.kartica p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* O NAMA */
+.o-nama {
+  padding: 5rem 2rem;
+  background: #1a1a1a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.o-nama-sadrzaj {
+  max-width: 700px;
+}
+
+.o-nama h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #f5a623;
+}
+
+.o-nama p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.o-nama ul {
+  list-style: none;
+}
+
+.o-nama ul li {
+  font-size: 1rem;
+  padding: 0.4rem 0;
+  color: #ddd;
+}
+
+/* KONTAKT */
+.kontakt {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.kontakt h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.kontakt p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #f5a623;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: #888;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
