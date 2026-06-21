@@ -246,18 +246,34 @@ const forma = document.getElementById('kontakt-forma');
 const submitBtn = document.getElementById('submit-btn');
 forma.addEventListener('submit', e => {
   e.preventDefault();
-  submitBtn.textContent = 'Šalje se...';
-  submitBtn.disabled = true;
-  setTimeout(() => {
-    submitBtn.textContent = '✓ Poruka poslata!';
-    submitBtn.style.background = '#059669';
-    forma.reset();
-    setTimeout(() => {
-      submitBtn.textContent = 'Pošaljite upit';
-      submitBtn.style.background = '';
-      submitBtn.disabled = false;
-    }, 4000);
-  }, 1200);
+
+  const ime     = document.getElementById('ime').value.trim();
+  const telefon = document.getElementById('telefon').value.trim();
+  const poruka  = document.getElementById('poruka').value.trim();
+
+  if (!ime || !telefon || !poruka) {
+    [['ime', ime], ['telefon', telefon], ['poruka', poruka]].forEach(([id, val]) => {
+      const el = document.getElementById(id);
+      el.style.borderColor = val ? '' : 'var(--amber)';
+    });
+    return;
+  }
+
+  const email  = document.getElementById('email').value.trim();
+  const usluga = document.getElementById('usluga').value;
+
+  const subject = `Upit za ${usluga || 'usluge'} – ${ime}`;
+  const body =
+    `Ime i prezime: ${ime}\n` +
+    `Telefon: ${telefon}\n` +
+    (email  ? `Email: ${email}\n`   : '') +
+    (usluga ? `Usluga: ${usluga}\n` : '') +
+    `\nOpis projekta:\n${poruka}`;
+
+  window.location.href =
+    `mailto:office@asco.rs?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  forma.reset();
 });
 
 // ── PRELOADER ──
@@ -271,25 +287,16 @@ setTimeout(hidePreloader, 2800); // fallback ako se učitavanje oduži
 // ── FAQ ACCORDION ──
 document.querySelectorAll('.faq-item').forEach(item => {
   const q = item.querySelector('.faq-q');
-  const a = item.querySelector('.faq-a');
   q.addEventListener('click', () => {
-    const isOpen = item.classList.contains('open');
+    const willOpen = !item.classList.contains('open');
     document.querySelectorAll('.faq-item.open').forEach(o => {
       if (o !== item) {
         o.classList.remove('open');
         o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-        o.querySelector('.faq-a').style.maxHeight = null;
       }
     });
-    if (isOpen) {
-      item.classList.remove('open');
-      q.setAttribute('aria-expanded', 'false');
-      a.style.maxHeight = null;
-    } else {
-      item.classList.add('open');
-      q.setAttribute('aria-expanded', 'true');
-      a.style.maxHeight = a.scrollHeight + 'px';
-    }
+    item.classList.toggle('open', willOpen);
+    q.setAttribute('aria-expanded', String(willOpen));
   });
 });
 
